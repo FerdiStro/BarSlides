@@ -21,10 +21,7 @@ document.addEventListener('click', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
-    const happyHours = [
-        { startHour: 0 },
-        { startHour: 4 },
-    ];
+
 
     function showSlide(index) {
         slides.forEach((slide, i) => {
@@ -45,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateCountdown() {
         const happyHours = [
-            { start: "12:01", end: "12:02", type: "a" },
-            { start: "13:01", end: "13:02", type: "a" },
+            { start: "12:15", end: "16:02", type: "a" },
+            { start: "14:32", end: "16:55", type: "b" },
             { start: "23:30", end: "00:00", type: "b" },
             { start: "01:00", end: "02:00", type: "a" },
             {start: "END"}
@@ -130,9 +127,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         if (nextHappyHour) {
-            document.getElementById('countdown').innerText = `Next Happy Hour starts in: ${Math.floor(remainingSecondsNext / 3600)}h ${Math.floor((remainingSecondsNext % 3600) / 60)}m ${remainingSecondsNext % 60}s`;
+            const happyHourB = document.querySelector('.happyHour-b');
+            happyHourB.style.display = 'none';
+            const possCount = document.querySelector('.possCount');
+            possCount.style.display = 'none';
+
+
+            document.getElementById('countTo').innerText = `${Math.floor(remainingSecondsNext / 3600)}h ${Math.floor((remainingSecondsNext % 3600) / 60)}m ${remainingSecondsNext % 60}s`;
             if(active){
-                document.getElementById('countdown').innerText = `Happy Hour ends in: ${Math.floor(remainingSecondsEnds / 3600)}h ${Math.floor((remainingSecondsEnds % 3600) / 60)}m ${remainingSecondsEnds % 60}s`;
+                const happyHourB = document.querySelector('.possCount');
+                happyHourB.style.display = 'block';
+
+                const nextCount = document.querySelector('.nextCount');
+                nextCount.style.display = 'none';
+
+
+                document.getElementById('countdown').innerText = `${Math.floor(remainingSecondsEnds / 3600)}h ${Math.floor((remainingSecondsEnds % 3600) / 60)}m ${remainingSecondsEnds % 60}s`;
 
                 if (nextHappyHour.type === 'a') {
                     const priceElements = document.querySelectorAll('.price-list .price');
@@ -146,9 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         priceElement.innerHTML = `<del>${formattedOriginalPrice}€</del> ${formattedDiscountedPrice}€`;
                     });
                 } else if (nextHappyHour.type === 'b') {
-                    const newContainer = document.createElement('div');
-                    newContainer.textContent = 'TEST';
-                    document.querySelector('.slide').appendChild(newContainer);
+                    const happyHourB = document.querySelector('.happyHour-b');
+                    happyHourB.style.display = 'inline';
                 }
             }
         }
