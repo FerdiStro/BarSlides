@@ -1,0 +1,60 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 5vh;
+}
+
+.slider-container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.slide {
+    display: block;
+    overflow-x: auto;
+    margin-left: 5vb;
+}
+
+
+.inside-slide {
+    display: flex;
+    margin-left: 20px;
+
+}
+
+
+.price-list{
+    margin-top: 16vh;
+
+
+}
+.price-list h3{
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.cocktail-img {
+    width: auto;
+    height: 50vh;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+
+#countdown{
+    padding-top: 10vh;
+    padding-left: 1vb;
+
+    height: 200vh;
+    background-color: red;
+}
+
+
+
+/* Stilisieren Sie Ihre Folien entsprechend */
