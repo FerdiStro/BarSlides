@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCountdown() {
         const happyHours = [
             { start: "12:15", end: "16:02", type: "a" },
-            { start: "14:32", end: "16:55", type: "b" },
+            { start: "15:19", end: "15:20", type: "b" },
             { start: "23:30", end: "00:00", type: "b" },
             { start: "01:00", end: "02:00", type: "a" },
             {start: "END"}
@@ -127,10 +127,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
         if (nextHappyHour) {
-            const happyHourB = document.querySelector('.happyHour-b');
-            happyHourB.style.display = 'none';
+            const happyHourBElements =  document.querySelectorAll('.happyHour-b');
+            happyHourBElements.forEach(e =>{
+                e.style.display =  'none'
+            })
             const possCount = document.querySelector('.possCount');
             possCount.style.display = 'none';
+
+            const nextCount = document.querySelector('.nextCount');
+            nextCount.style.display = 'inline';
 
 
             document.getElementById('countTo').innerText = `${Math.floor(remainingSecondsNext / 3600)}h ${Math.floor((remainingSecondsNext % 3600) / 60)}m ${remainingSecondsNext % 60}s`;
@@ -140,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const nextCount = document.querySelector('.nextCount');
                 nextCount.style.display = 'none';
+
 
 
                 document.getElementById('countdown').innerText = `${Math.floor(remainingSecondsEnds / 3600)}h ${Math.floor((remainingSecondsEnds % 3600) / 60)}m ${remainingSecondsEnds % 60}s`;
@@ -156,8 +162,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         priceElement.innerHTML = `<del>${formattedOriginalPrice}€</del> ${formattedDiscountedPrice}€`;
                     });
                 } else if (nextHappyHour.type === 'b') {
-                    const happyHourB = document.querySelector('.happyHour-b');
-                    happyHourB.style.display = 'inline';
+                    const happyHourBElements =  document.querySelectorAll('.happyHour-b');
+                    happyHourBElements.forEach(e =>{
+                        e.style.display =  'inline'
+                    })
                 }
             }
         }
