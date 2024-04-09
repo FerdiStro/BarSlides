@@ -1,4 +1,8 @@
+
+
 <!DOCTYPE html>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,14 +11,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div id="particles-js"></div>
+
+<div class="possCount">
+    <div class="sign">
+        <span class="fast-flicker">H</span>appy-<span class="flicker">H</span>our
+
+    </div>
+    <div id="countdown"></div>
+
+</div>
+<div class="nextCount">
+    Happy-Hour in:
+    <div style="display: inline" id="countTo"></div>
+</div>
 
 
-<div class="slider-container">
+<div class="slider-container" >
 
     <div class="slide">
         <h1>Touch Down</h1>
         <div class="inside-slide">
-                <img class="cocktail-img" src="assets/touch_down.png" alt="Touch Down">
+            <img class="cocktail-img" src="assets/coctail/touch_down.png" alt="Touch Down">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
             <div class="price-list">
                 <div>
                     <h3>Preis&nbsp;  </h3>
@@ -25,105 +46,270 @@
                     <p  style="display: inline">1.00€</p>
                 </div>
             </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- Tequila Sunrise Slide -->
+    <div class="slide">
+        <h1>Tequila Sunrise</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/tequila_sunrise.png" alt="Tequila Sunrise">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="5"> 5.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
         </div>
     </div>
 
-<!--        <div class="slide">-->
-<!--            <img src="tequila_sunrise.jpg" alt="Tequila Sunrise">-->
-<!--            <h2>Tequila Sunrise</h2>-->
-<!--            <p class="price" data-original-price="5">Preis: 5€</p>-->
-<!--            <p>Pfand: 1€</p>-->
-<!--        </div>-->
+    <!-- Sex on the Beach Slide -->
+    <div class="slide">
+        <h1>Sex on the Beach</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/sex_on_the_beach.png" alt="Sex on the Beach">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="5"> 5.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Pina Colada Slide -->
+    <div class="slide">
+        <h1>Pina Colada</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/pina_colada.png" alt="Pina Colada">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="5"> 5.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mojito Slide -->
+    <div class="slide">
+        <h1>Mojito</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/mojito.png" alt="Mojito">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Aperol Sour Slide -->
+    <div class="slide">
+        <h1>Aperol Sour</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/aperol_sour.png" alt="Aperol Sour">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="tequila_sunrise.jpg" alt="Tequila Sunrise">-->
-<!--        <h2>Tequila Sunrise</h2>-->
-<!--        <p class="price" data-original-price="5">Preis: 5€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Aperol Spritz Slide -->
+    <div class="slide">
+        <h1>Aperol Spritz</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/aperol_spritz.png" alt="Aperol Spritz">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="sex_on_the_beach.jpg" alt="Sex on the Beach">-->
-<!--        <h2>Sex on the Beach</h2>-->
-<!--        <p class="price" data-original-price="5">Preis: 5€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Gin Tonic Slide -->
+    <div class="slide">
+        <h1>Gin Tonic</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/gin_tonic.png" alt="Gin Tonic">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="pina_colada.jpg" alt="Pina Colada">-->
-<!--        <h2>Pina Colada</h2>-->
-<!--        <p class="price" data-original-price="5">Preis: 5€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Jäger Bull Slide -->
+    <div class="slide">
+        <h1>Jäger Bull</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/jager_bull.png" alt="Jäger Bull">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="mojito.jpg" alt="Mojito">-->
-<!--        <h2>Mojito</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Vodka Bull Slide -->
+    <div class="slide">
+        <h1>Vodka Bull</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/vodka_bull.png" alt="Vodka Bull">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="aperol_sour.jpg" alt="Aperol Sour">-->
-<!--        <h2>Aperol Sour</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Cuba Libre Slide -->
+    <div class="slide">
+        <h1>Cuba Libre</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/cuba_libre.png" alt="Cuba Libre">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="aperol_spritz.jpg" alt="Aperol Spritz">-->
-<!--        <h2>Aperol Spritz</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Wild Berry Lillet Slide -->
+    <div class="slide">
+        <h1>Wild Berry Lillet</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/wild_berry_lillet.png" alt="Wild Berry Lillet">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="4"> 4.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="gin_tonic.jpg" alt="Gin Tonic">-->
-<!--        <h2>Gin Tonic</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
+    <!-- Long Island Ice Tea Slide -->
+    <div class="slide">
+        <h1>Long Island Ice Tea</h1>
+        <div class="inside-slide">
+            <img class="cocktail-img" src="assets/coctail/long_island_ice_tea.png" alt="Long Island Ice Tea">
+            <div class="happyHour-b">
+                + <p style="font-size: 10vh; display: inline; position: relative; top: -7vh; left: -2vh">Free</p><img class="coupon" src="assets/coupon.png">
+            </div>
+            <div class="price-list">
+                <div>
+                    <h3>Preis&nbsp;  </h3>
+                    <p style="display: inline" class="price" data-original-price="5"> 5.00€</p>
+                </div>
+                <div>
+                    <h3>Pfand</h3>
+                    <p style="display: inline">1.00€</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!--    <div class="slide">-->
-<!--        <img src="jager_bull.jpg" alt="Jäger Bull">-->
-<!--        <h2>Jäger Bull</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
-
-<!--    <div class="slide">-->
-<!--        <img src="vodka_bull.jpg" alt="Vodka Bull">-->
-<!--        <h2>Vodka Bull</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
-
-<!--    <div class="slide">-->
-<!--        <img src="cuba_libre.jpg" alt="Cuba Libre">-->
-<!--        <h2>Cuba Libre</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
-
-<!--    <div class="slide">-->
-<!--        <img src="wild_berry_lillet.jpg" alt="Wild Berry Lillet">-->
-<!--        <h2>Wild Berry Lillet</h2>-->
-<!--        <p class="price" data-original-price="4">Preis: 4€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
-
-<!--    <div class="slide">-->
-<!--        <img src="long_island_ice_tea.jpg" alt="Long Island Ice Tea">-->
-<!--        <h2>Long Island Ice Tea</h2>-->
-<!--        <p class="price" data-original-price="5">Preis: 5€</p>-->
-<!--        <p>Pfand: 1€</p>-->
-<!--    </div>-->
-    <div id="countdown"></div>
 </div>
 
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="lib/particle-config.js"></script>
+
+
 </body>
 </html>
