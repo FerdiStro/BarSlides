@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCountdown() {
         const happyHours = [
             { start: "12:15", end: "16:02", type: "a" },
-            { start: "15:19", end: "15:20", type: "b" },
+            { start: "15:35", end: "15:40", type: "a" },
             { start: "23:30", end: "00:00", type: "b" },
             { start: "01:00", end: "02:00", type: "a" },
             {start: "END"}
